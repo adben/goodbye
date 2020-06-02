@@ -30,7 +30,7 @@ public class ApacheClient extends Thread {
         HttpClient httpClient = HttpClientBuilder.create().build();
 
         // Service invocation
-        String result = null;
+        String result;
         try {
             result = EntityUtils.toString(httpClient.execute(httpGet).getEntity());
         } catch (Exception e) {
